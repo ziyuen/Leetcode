@@ -21,3 +21,11 @@ The extra space required depends on the number of items
 stored in the hash table, which stores at most n elements.
 
 要包围在 class Solution{} 里面
+
+map.get(key) => value  
+get() method is used to retrieve or fetch the value mapped by a particular 
+key mentioned in the parameter. 
+It returns NULL when the map contains no such mapping for the key.
+
+map.put(key,value)
+Put a key-value pair in hashmap
