@@ -43,4 +43,4 @@ class Solution {
 注意的函数： 
 String 的 charAt()
 stack 的 pop 和 push
-最后如果stack里存在 '#'， 还是会return false 
+最后如果stack里存在 '#'， 还是会return false ～
