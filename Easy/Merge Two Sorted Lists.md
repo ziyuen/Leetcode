@@ -20,3 +20,6 @@ Create a new linked-list, then compare the elements inside the
 two sorted linked-lists. Add the node with smaller value into 
 the new list. If one of the linked lists is empty, add the remained
 list into the new list.
+
+Time complexity: O(m+n)
+Space complexity: O(1)

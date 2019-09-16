@@ -22,9 +22,13 @@ To fetch the size of a arrayList, use "size()"
 To check if a string is a substring of the other string,
 use "indexOf()", return the beginning index of the substring. If not, return -1. 
 
-    isEmpty()
-        分配了内存空间，值为空，是绝对的空，是一种有值（值 = 空）  
-    ""
-        分配了内存空间，值为空字符串，是相对的空，是一种有值（值 = 空字串）  
-    null
-        是未分配内存空间，无值，是一种无值(值不存在)
+isEmpty()
+   分配了内存空间，值为空，是绝对的空，是一种有值（值 = 空）  
+""
+   分配了内存空间，值为空字符串，是相对的空，是一种有值（值 = 空字串）  
+null
+   是未分配内存空间，无值，是一种无值(值不存在)
+
+时间复杂度：最坏的情况就是 n 个 长度为 m 的完全一样的字符串，假设 S 是所有字符的和，那么 S = m * n，时间复杂度就是 O（S）。当然正常情况下并不需要比较所有字符串，最多比较 n * minLen 个字符就可以了。
+
+空间复杂度：O（1），常数个额外空间。
