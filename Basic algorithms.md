@@ -49,7 +49,7 @@ void quicksort(vector<int>& array, int leftEnd, int rightEnd) {
     int right = rightEnd;
     int pivot = array[(leftEnd + rightEnd)/2];
     do {
-        while (array[left] < pivot>) {
+        while (array[left] < pivot) {
             left += 1;
         }
         while (array[right] > right) {
