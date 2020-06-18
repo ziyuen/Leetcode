@@ -3,7 +3,7 @@
 BST 的 in-order traversal 会得到一个递增的序列
 类似于 LC.98
 
-```
+```cpp
 class Solution {
 public:
     int kthSmallest(TreeNode* root, int k) {
@@ -28,7 +28,7 @@ private:
 Time complexity: O(n)
 
 ### Method 2: Iteration (Stack)
-```
+```cpp
 class Solution {
 public:
     int kthSmallest(TreeNode* root, int k) {
@@ -57,7 +57,7 @@ public:
 
 time complexity: O(N) best, O(N^2) worst
 
-```
+```java
 // 用JAVA 写的，看一看就好，不是最优解
 public int kthSmallest(TreeNode root, int k) {
       int count = countNodes(root.left);    数一下左子树有多少个节点
