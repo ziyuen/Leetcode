@@ -1,6 +1,6 @@
 Tree Traversal
 
-```
+```cpp
 // preorder
 void preorder(Node root) {
     if (!root) {
@@ -30,7 +30,7 @@ void postorder(Node root) {
 ```
 
 QuickSort
-```
+```cpp
 public:
 void quicksort(vector<int>& array) {
     if (array.size() > 1)
