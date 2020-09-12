@@ -1,2 +1,1 @@
-Leetcode notes...
-My first github repo...2
+# Leetcode notes

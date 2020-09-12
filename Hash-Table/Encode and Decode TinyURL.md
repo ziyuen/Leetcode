@@ -6,7 +6,7 @@ revIndex:
 -key: long url
 -value: a sequence of random number(6 digits)
 
-```
+```java
 public class Codec {
     Map<String, String> index = new HashMap<String, String>();
     Map<String, String> revIndex = new HashMap<String, String>();
