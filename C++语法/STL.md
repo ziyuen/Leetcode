@@ -12,3 +12,64 @@ c.clear(): 删除容器中所有元素，使容器成为空容器。
 ## Deque 双端队列
 可以 push_front(), pop_front(), push_back(), pop_back()
 通过 front() 访问第一个元素 以及 通过 back() 访问最后一个元素。
+
+## 自定义堆
+
+最小堆：priority_queue<int, vector<int>, greater<int>> min_heap;
+
+```cpp
+#include <iostream>
+#include <queue>
+
+using namespace std;
+
+typedef struct packet {
+    int priority;
+    std::string name;
+
+    friend bool operator<(const packet& a, const packet& b) {
+        return a.priority > b.priority;
+    }
+
+}
+packet;
+
+struct comparator
+{
+    bool operator()(const packet * a, const packet *b)
+    {
+        return a->priority > b->priority;
+    }
+};
+
+//comparator f; edit - no need for this forgot to comment oops
+
+int main() {
+    std::priority_queue<packet*,vector<packet*>,comparator> packets; // i add comparator and vector<packet*> here
+
+    packet* p1 = new packet();
+    packet* p2 = new packet();
+    packet* p3 = new packet();
+
+    p1->priority = 200;
+    p2->priority = 20;
+    p3->priority = 89;
+
+    p1->name= "test";
+    p2->name = "test2";
+    p3->name = "test3";
+
+    packets.push(p1);
+    packets.push(p2);
+    packets.push(p3);
+
+    std::cout << "first: " << packets.top()->name;
+    packets.pop();
+    std::cout << "second: " << packets.top()->name;
+    packets.pop();
+    std::cout << "third: " << packets.top()->name;
+    packets.pop();
+
+    return 0;
+}
+```
