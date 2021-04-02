@@ -1,0 +1,32 @@
+## Method 1
+
+让我们逐位将数字加在一起。例如计算 123+912123+912，我们从低位到高位依次计算 3+23+2、2+12+1 和 1+91+9。任何时候，若加法的结果大于等于 1010，把进位的 11 加入到下一位的计算中，所以最终结果为 10351035。
+
+作者：LeetCode-Solution
+链接：https://leetcode-cn.com/problems/add-to-array-form-of-integer/solution/shu-zu-xing-shi-de-zheng-shu-jia-fa-by-l-jljp/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+```cpp
+class Solution {
+public:
+    vector<int> addToArrayForm(vector<int> &A, int K) {
+        vector<int> res;
+        int n = A.size();
+        for (int i = n - 1; i >= 0; --i) {
+            int sum = A[i] + K % 10;
+            K /= 10;
+            if (sum >= 10) {
+                K++;
+                sum -= 10;
+            }
+            res.push_back(sum);
+        }
+        for (; K > 0; K /= 10) {
+            res.push_back(K % 10);
+        }
+        reverse(res.begin(), res.end());
+        return res;
+    }
+};
+```

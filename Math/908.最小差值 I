@@ -1,0 +1,17 @@
+## Method1
+
+```cpp
+class Solution {
+public:
+    int smallestRangeI(vector<int>& A, int K) {
+        int maxN = A[0], minN = A[0];
+        for (int n : A) {
+            maxN = max(n, maxN);
+            minN = min(n, minN);
+        }
+        int d = maxN - minN - 2 * K;
+        return d >= 0 ? d : 0;
+    }
+};
+```
+只要一个数大于或等于 -K，小于等于 K 就可以添加。。
